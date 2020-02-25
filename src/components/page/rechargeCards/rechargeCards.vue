@@ -156,11 +156,11 @@
           class="button button-raised button-primary button-pill btn-uncertification renewalBtn"
           >充值续费</a
         >
-        <div class="f-link">
+        <!-- <div class="f-link">
           <a class="f-flowDetail">
             特别提醒：本卡不能用于机器远程激活使用，因为远程更新需要消耗5到10M的流量。会导致超出套餐流量造成停机。远程激活的支付品牌有：卡友，拉卡拉等。</a
           >
-        </div>
+        </div> -->
       </div>
     </footer>
   </div>
@@ -200,7 +200,7 @@ export default {
         data => {
           if (data.code == 1) {
             this.loading = true;
-            data.data.cardStatus = 1;
+            // data.data.cardStatus = 1;
             this.iccidInfo = data.data;
           }
         },
@@ -388,6 +388,8 @@ sup {
   border-bottom: 1px solid #ddd;
 }
 .tabs a.active {
+  padding-left: 5px;
+  text-align: left;
   color: #ea445c;
   border-radius: 5px 5px 0px 0px;
   border-color: #ea445c;
@@ -476,7 +478,7 @@ sup {
 footer {
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: 75px;
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
